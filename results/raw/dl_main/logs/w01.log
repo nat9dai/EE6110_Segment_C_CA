@@ -1,0 +1,261 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261020_185843.log
+2026-10-20T10:58:43Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/bb882a16-e84d-47d9-cd718fa2-a2d26a3e.dmp'
+2026-10-20T10:58:43Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/339b398b-5f36-4162-68da608b-9c1a11c7.dmp'
+2026-10-20T10:58:43Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-10-20T10:58:43Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 38870
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-20T10:58:46Z [3,052ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-20T10:58:46Z [3,064ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-10-20T10:58:47Z [4,162ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-20T10:58:47Z [4,368ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-10-20T10:58:47Z [4,372ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-10-20T10:58:49Z [5,725ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-20T10:58:49Z [5,902ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-10-20T10:58:49Z [5,902ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-10-20T10:58:49Z [5,903ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-20T10:58:51Z [8,099ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-10-20T10:58:56Z [12,801ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w1] resuming with 0 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-10-20_18-58-57.log[0m
+[36m======================================================================================[0m
+
+[33m18:58:57 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m18:59:04 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-10-20T10:59:06Z [23,136ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-10-20T10:59:09Z [26,390ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w1] pool ready (40 objects), methods=['safe_oacbf', 'safe_oacbf@recover=reobserve']
+[w1] scene 107001 sparse tgt=Tag_Dishtowel_18_x_26        safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=4.8s
+[w1] scene 107001 sparse tgt=Tag_Dishtowel_18_x_26        safe_oacbf@recover=reobserve succ=False fail=approach_stall coll=False dist=0 t=6.4s
+[w1] scene 207001 medium tgt=Room_Essentials_Dish_Drainer safe_oacbf         succ=False fail=slip coll=False dist=0 t=25.4s
+[w1] scene 207001 medium tgt=Room_Essentials_Dish_Drainer safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=28.5s
+[w1] scene 307001 dense  tgt=Perricone_MD_No_Lipstick_Lip safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.4s
+[w1] scene 307001 dense  tgt=Perricone_MD_No_Lipstick_Lip safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=14.1s
+[w1] scene 407001 hidden tgt=My_First_Rolling_Lion        safe_oacbf         succ=True fail=None coll=False dist=0 t=13.0s
+[w1] scene 407001 hidden tgt=My_First_Rolling_Lion        safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=12.3s
+[w1] scene 107006 sparse tgt=Office_Depot_Dell_Series_1_R safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.0s
+[w1] scene 107006 sparse tgt=Office_Depot_Dell_Series_1_R safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=9.8s
+[w1] scene 207006 medium tgt=PUNCH_DROP                   safe_oacbf         succ=False fail=slip coll=False dist=0 t=13.1s
+[w1] scene 207006 medium tgt=PUNCH_DROP                   safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=12.5s
+[w1] scene 307006 dense  tgt=DINING_ROOM_CLASSIC_UJuxQ0hv safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.1s
+[w1] scene 307006 dense  tgt=DINING_ROOM_CLASSIC_UJuxQ0hv safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=12.7s
+[w1] scene 407006 hidden tgt=Perricone_MD_AcylGlutathione safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=15.2s
+[w1] scene 407006 hidden tgt=Perricone_MD_AcylGlutathione safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=18.5s
+[w1] scene 107011 sparse tgt=Razer_Abyssus_Ambidextrous_G safe_oacbf         succ=False fail=slip coll=False dist=0 t=9.4s
+[w1] scene 107011 sparse tgt=Razer_Abyssus_Ambidextrous_G safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=8.4s
+[w1] scene 207011 medium tgt=Black_Forest_Fruit_Snacks_Ju safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=15.0s
+[w1] scene 207011 medium tgt=Black_Forest_Fruit_Snacks_Ju safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=1 t=22.7s
+2026-10-20T11:04:31Z [348,386ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w1] scene 307011 dense  tgt=Crayola_Crayons_24_count     safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=7.4s
+[w1] scene 307011 dense  tgt=Crayola_Crayons_24_count     safe_oacbf@recover=reobserve succ=False fail=approach_stall coll=False dist=1 t=11.5s
+[w1] scene 407011 hidden tgt=Perricone_MD_Omega_3_Supplem safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.6s
+[w1] scene 407011 hidden tgt=Perricone_MD_Omega_3_Supplem safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=8.4s
+[w1] scene 107016 sparse tgt=Room_Essentials_Dish_Drainer safe_oacbf         succ=False fail=slip coll=False dist=0 t=16.5s
+[w1] scene 107016 sparse tgt=Room_Essentials_Dish_Drainer safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=15.8s
+[w1] scene 207016 medium tgt=Crosley_Alarm_Clock_Vintage_ safe_oacbf         succ=False fail=slip coll=False dist=0 t=13.2s
+[w1] scene 207016 medium tgt=Crosley_Alarm_Clock_Vintage_ safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=12.2s
+[w1] scene 307016 dense  tgt=Perricone_MD_Omega_3_Supplem safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=16.0s
+[w1] scene 307016 dense  tgt=Perricone_MD_Omega_3_Supplem safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=1 t=12.7s
+[w1] scene 407016 hidden tgt=House_of_Cards_The_Complete_ safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=12.0s
+[w1] scene 407016 hidden tgt=House_of_Cards_The_Complete_ safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=6.8s
+[w1] finished 16 scenes in 485s
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261020_190822.log
+2026-10-20T11:08:22Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/bb882a16-e84d-47d9-cd718fa2-a2d26a3e.dmp'
+2026-10-20T11:08:22Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/339b398b-5f36-4162-68da608b-9c1a11c7.dmp'
+2026-10-20T11:08:22Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-10-20T11:08:22Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 38475
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-20T11:08:25Z [3,071ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-20T11:08:25Z [3,083ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-10-20T11:08:26Z [4,063ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-20T11:08:27Z [4,268ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-10-20T11:08:27Z [4,272ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-10-20T11:08:28Z [5,647ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-20T11:08:28Z [5,822ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-10-20T11:08:28Z [5,822ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-10-20T11:08:28Z [5,822ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-20T11:08:30Z [7,824ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-10-20T11:08:35Z [12,967ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w1] resuming with 32 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-10-20_19-08-37.log[0m
+[36m======================================================================================[0m
+
+[33m19:08:37 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m19:08:44 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-10-20T11:08:46Z [23,928ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-10-20T11:08:49Z [26,797ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w1] pool ready (40 objects), methods=['safe_oacbf', 'safe_oacbf@recover=reobserve']
+[w1] scene 108001 sparse tgt=SPEED_BOAT                   safe_oacbf         succ=False fail=slip coll=False dist=0 t=13.0s
+[w1] scene 108001 sparse tgt=SPEED_BOAT                   safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=9.2s
+[w1] scene 208001 medium tgt=Razer_Kraken_Pro_headset_Ful safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.2s
+[w1] scene 208001 medium tgt=Razer_Kraken_Pro_headset_Ful safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=15.1s
+[w1] scene 308001 dense  tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf         succ=False fail=transit_stall coll=False dist=0 t=15.9s
+[w1] scene 308001 dense  tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf@recover=reobserve succ=False fail=transit_stall coll=False dist=0 t=19.0s
+[w1] scene 408001 hidden tgt=Whey_Protein_3_Flavor_Variet safe_oacbf         succ=False fail=slip coll=False dist=1 t=13.9s
+[w1] scene 408001 hidden tgt=Whey_Protein_3_Flavor_Variet safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=13.7s
+[w1] scene 108006 sparse tgt=Razer_Kraken_Pro_headset_Ful safe_oacbf         succ=False fail=slip coll=False dist=0 t=9.7s
+[w1] scene 108006 sparse tgt=Razer_Kraken_Pro_headset_Ful safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=10.3s
+[w1] scene 208006 medium tgt=Hasbro_Trivial_Pursuit_Famil safe_oacbf         succ=False fail=slip coll=False dist=0 t=16.8s
+[w1] scene 208006 medium tgt=Hasbro_Trivial_Pursuit_Famil safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=14.0s
+[w1] scene 308006 dense  tgt=Cascadia_8_Color_AquariusHib safe_oacbf         succ=False fail=slip coll=False dist=0 t=20.4s
+[w1] scene 308006 dense  tgt=Cascadia_8_Color_AquariusHib safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=17.6s
+[w1] scene 408006 hidden tgt=Office_Depot_Dell_Series_11_ safe_oacbf         succ=True fail=None coll=False dist=1 t=12.9s
+[w1] scene 408006 hidden tgt=Office_Depot_Dell_Series_11_ safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=1 t=13.6s
+[w1] scene 108011 sparse tgt=Nestle_Candy_19_oz_Butterfin safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.1s
+[w1] scene 108011 sparse tgt=Nestle_Candy_19_oz_Butterfin safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=10.6s
+2026-10-20T11:13:37Z [314,689ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w1] scene 208011 medium tgt=BREAKFAST_MENU               safe_oacbf         succ=True fail=None coll=False dist=0 t=15.3s
+[w1] scene 208011 medium tgt=BREAKFAST_MENU               safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=15.2s
+[w1] scene 308011 dense  tgt=Epson_Ink_Cartridge_Black_20 safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=9.4s
+[w1] scene 308011 dense  tgt=Epson_Ink_Cartridge_Black_20 safe_oacbf@recover=reobserve succ=False fail=approach_stall coll=False dist=0 t=10.4s
+[w1] scene 408011 hidden tgt=Epson_Ink_Cartridge_Black_20 safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.1s
+[w1] scene 408011 hidden tgt=Epson_Ink_Cartridge_Black_20 safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=16.5s
+[w1] scene 108016 sparse tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=16.1s
+[w1] scene 108016 sparse tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=10.8s
+[w1] scene 208016 medium tgt=Whey_Protein_3_Flavor_Variet safe_oacbf         succ=False fail=approach_stall coll=False dist=1 t=11.1s
+[w1] scene 208016 medium tgt=Whey_Protein_3_Flavor_Variet safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=3 t=10.9s
+[w1] scene 308016 dense  tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf         succ=False fail=slip coll=False dist=0 t=7.8s
+[w1] scene 308016 dense  tgt=Nestle_Pure_Life_Exotics_Spa safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=8.3s
+[w1] scene 408016 hidden tgt=Hasbro_Trivial_Pursuit_Famil safe_oacbf         succ=False fail=slip coll=False dist=0 t=7.6s
+[w1] scene 408016 hidden tgt=Hasbro_Trivial_Pursuit_Famil safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=6.6s
+[w1] finished 16 scenes in 477s
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261020_191705.log
+2026-10-20T11:17:05Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/bb882a16-e84d-47d9-cd718fa2-a2d26a3e.dmp'
+2026-10-20T11:17:05Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/339b398b-5f36-4162-68da608b-9c1a11c7.dmp'
+2026-10-20T11:17:05Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-10-20T11:17:05Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 38427
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-20T11:17:08Z [3,046ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-20T11:17:08Z [3,057ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-10-20T11:17:09Z [3,933ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-20T11:17:09Z [4,142ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-10-20T11:17:09Z [4,145ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-10-20T11:17:10Z [5,626ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-20T11:17:11Z [5,799ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-10-20T11:17:11Z [5,799ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-10-20T11:17:11Z [5,803ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-20T11:17:13Z [7,910ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-10-20T11:17:18Z [12,705ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w1] resuming with 64 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-10-20_19-17-19.log[0m
+[36m======================================================================================[0m
+
+[33m19:17:19 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m19:17:25 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-10-20T11:17:28Z [23,582ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-10-20T11:17:30Z [25,361ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w1] pool ready (40 objects), methods=['safe_oacbf', 'safe_oacbf@recover=reobserve']
+[w1] scene 109001 sparse tgt=Lavender_Snake_Tieks_Snake_P safe_oacbf         succ=False fail=slip coll=False dist=0 t=6.4s
+[w1] scene 109001 sparse tgt=Lavender_Snake_Tieks_Snake_P safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=6.3s
+[w1] scene 209001 medium tgt=Perricone_MD_Cold_Plasma     safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.2s
+[w1] scene 209001 medium tgt=Perricone_MD_Cold_Plasma     safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=13.0s
+[w1] scene 309001 dense  tgt=Ortho_Forward_Facing         safe_oacbf         succ=True fail=None coll=False dist=0 t=9.1s
+[w1] scene 309001 dense  tgt=Ortho_Forward_Facing         safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=9.5s
+[w1] scene 409001 hidden tgt=Whey_Protein_Chocolate_12_Pa safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.5s
+[w1] scene 409001 hidden tgt=Whey_Protein_Chocolate_12_Pa safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=8.1s
+[w1] scene 109006 sparse tgt=Ecoforms_Plant_Container_SB9 safe_oacbf         succ=True fail=None coll=False dist=0 t=8.7s
+[w1] scene 109006 sparse tgt=Ecoforms_Plant_Container_SB9 safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=9.9s
+[w1] scene 209006 medium tgt=Perricone_MD_The_Metabolic_F safe_oacbf         succ=False fail=slip coll=False dist=0 t=8.5s
+[w1] scene 209006 medium tgt=Perricone_MD_The_Metabolic_F safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=8.7s
+[w1] scene 309006 dense  tgt=Womens_Bluefish_2Eye_Boat_Sh safe_oacbf         succ=False fail=slip coll=False dist=1 t=10.4s
+[w1] scene 309006 dense  tgt=Womens_Bluefish_2Eye_Boat_Sh safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=1 t=9.8s
+[w1] scene 409006 hidden tgt=Perricone_MD_Cold_Plasma     safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.5s
+[w1] scene 409006 hidden tgt=Perricone_MD_Cold_Plasma     safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=12.1s
+[w1] scene 109011 sparse tgt=Perricone_MD_The_Metabolic_F safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.0s
+[w1] scene 109011 sparse tgt=Perricone_MD_The_Metabolic_F safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=10.6s
+[w1] scene 209011 medium tgt=Womens_Sparkle_Suede_Bahama_ safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=11.7s
+[w1] scene 209011 medium tgt=Womens_Sparkle_Suede_Bahama_ safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=1 t=14.6s
+[w1] scene 309011 dense  tgt=Timberland_Mens_Earthkeepers safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=5.3s
+[w1] scene 309011 dense  tgt=Timberland_Mens_Earthkeepers safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=1 t=11.9s
+[w1] scene 409011 hidden tgt=Perricone_MD_The_Metabolic_F safe_oacbf         succ=False fail=slip coll=False dist=0 t=14.1s
+[w1] scene 409011 hidden tgt=Perricone_MD_The_Metabolic_F safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=13.1s
+2026-10-20T11:22:23Z [317,654ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w1] scene 109016 sparse tgt=Cole_Hardware_Flower_Pot_102 safe_oacbf         succ=True fail=None coll=False dist=0 t=7.6s
+[w1] scene 109016 sparse tgt=Cole_Hardware_Flower_Pot_102 safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=10.0s
+[w1] scene 209016 medium tgt=Perricone_MD_The_Metabolic_F safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.4s
+[w1] scene 209016 medium tgt=Perricone_MD_The_Metabolic_F safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=11.8s
+[w1] scene 309016 dense  tgt=Reebok_DMX_MAX_MANIA_WD_D    safe_oacbf         succ=True fail=None coll=False dist=0 t=14.8s
+[w1] scene 309016 dense  tgt=Reebok_DMX_MAX_MANIA_WD_D    safe_oacbf@recover=reobserve succ=True fail=None coll=False dist=0 t=14.9s
+[w1] scene 409016 hidden tgt=Perricone_MD_The_Metabolic_F safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.9s
+[w1] scene 409016 hidden tgt=Perricone_MD_The_Metabolic_F safe_oacbf@recover=reobserve succ=False fail=slip coll=False dist=0 t=9.1s
+[w1] finished 16 scenes in 395s

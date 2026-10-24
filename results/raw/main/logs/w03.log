@@ -1,0 +1,543 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260930_032115.log
+2026-09-29T19:21:15Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-09-29T19:21:15Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 38956
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-09-29T19:21:22Z [7,763ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-09-29T19:21:22Z [7,777ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-09-29T19:21:24Z [9,089ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-09-29T19:21:24Z [9,323ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-09-29T19:21:24Z [9,327ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-09-29T19:21:26Z [11,905ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-09-29T19:21:27Z [12,237ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-09-29T19:21:27Z [12,237ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-09-29T19:21:27Z [12,238ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-09-29T19:21:30Z [15,579ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-09-29T19:21:39Z [24,746ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w3] resuming with 0 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-09-30_03-21-41.log[0m
+[36m======================================================================================[0m
+
+[33m03:21:41 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m03:21:48 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-09-29T19:21:49Z [34,826ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-09-29T19:21:50Z [35,162ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w3] pool ready (40 objects), methods=['td_nom', 'ant_nom', 'ant_apf', 'ant_cbf', 'ant_oacbf', 'safe_nom', 'safe_cbf', 'safe_oacbf']
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow td_nom             succ=True fail=None coll=False dist=0 t=6.1s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow ant_nom            succ=True fail=None coll=False dist=0 t=7.8s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow ant_apf            succ=True fail=None coll=False dist=0 t=9.8s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow ant_cbf            succ=True fail=None coll=False dist=0 t=13.0s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow ant_oacbf          succ=False fail=approach_timeout coll=False dist=0 t=14.9s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow safe_nom           succ=False fail=slip coll=False dist=0 t=7.9s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow safe_cbf           succ=False fail=slip coll=False dist=0 t=8.3s
+[w3] scene 107003 sparse tgt=Nestle_Nesquik_Chocolate_Pow safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.5s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ td_nom             succ=False fail=ik_fail coll=False dist=0 t=1.1s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ ant_nom            succ=True fail=None coll=False dist=0 t=9.4s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ ant_apf            succ=True fail=None coll=False dist=0 t=11.8s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ ant_cbf            succ=True fail=None coll=False dist=0 t=11.7s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ ant_oacbf          succ=True fail=None coll=False dist=0 t=11.8s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ safe_nom           succ=True fail=None coll=False dist=0 t=9.8s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ safe_cbf           succ=True fail=None coll=False dist=0 t=10.3s
+[w3] scene 207003 medium tgt=Cole_Hardware_Bowl_Scirocco_ safe_oacbf         succ=True fail=None coll=False dist=0 t=12.0s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi td_nom             succ=False fail=approach_stall coll=False dist=3 t=19.0s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi ant_nom            succ=False fail=slip coll=True dist=4 t=11.7s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi ant_apf            succ=False fail=approach_stall coll=False dist=0 t=17.9s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi ant_cbf            succ=False fail=slip coll=False dist=3 t=14.6s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi ant_oacbf          succ=False fail=slip coll=False dist=2 t=10.4s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi safe_nom           succ=False fail=slip coll=False dist=1 t=9.9s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi safe_cbf           succ=False fail=slip coll=False dist=0 t=11.8s
+[w3] scene 307003 dense  tgt=Perricone_MD_Neuropeptide_Fi safe_oacbf         succ=False fail=slip coll=False dist=0 t=14.2s
+[w3] scene 407003 hidden tgt=SAMe_200                     td_nom             succ=False fail=approach_stall coll=False dist=0 t=10.9s
+[w3] scene 407003 hidden tgt=SAMe_200                     ant_nom            succ=True fail=None coll=False dist=0 t=9.3s
+[w3] scene 407003 hidden tgt=SAMe_200                     ant_apf            succ=True fail=None coll=False dist=0 t=10.9s
+[w3] scene 407003 hidden tgt=SAMe_200                     ant_cbf            succ=True fail=None coll=False dist=0 t=11.5s
+[w3] scene 407003 hidden tgt=SAMe_200                     ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=13.2s
+[w3] scene 407003 hidden tgt=SAMe_200                     safe_nom           succ=True fail=None coll=False dist=0 t=8.0s
+[w3] scene 407003 hidden tgt=SAMe_200                     safe_cbf           succ=True fail=None coll=False dist=0 t=9.2s
+[w3] scene 407003 hidden tgt=SAMe_200                     safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=13.6s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll td_nom             succ=True fail=None coll=False dist=0 t=6.0s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll ant_nom            succ=True fail=None coll=False dist=0 t=8.9s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll ant_apf            succ=True fail=None coll=False dist=0 t=12.6s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll ant_cbf            succ=True fail=None coll=False dist=0 t=12.2s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll ant_oacbf          succ=True fail=None coll=False dist=0 t=9.9s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll safe_nom           succ=True fail=None coll=False dist=0 t=7.5s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll safe_cbf           succ=True fail=None coll=False dist=0 t=10.8s
+[w3] scene 107008 sparse tgt=PureConnect_2_Color_BlckBrll safe_oacbf         succ=True fail=None coll=False dist=0 t=12.3s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.5s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi ant_nom            succ=False fail=slip coll=False dist=0 t=7.5s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi ant_apf            succ=False fail=slip coll=False dist=0 t=8.2s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi ant_cbf            succ=False fail=slip coll=False dist=0 t=6.7s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=12.9s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi safe_nom           succ=True fail=None coll=False dist=0 t=5.8s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi safe_cbf           succ=True fail=None coll=False dist=0 t=7.2s
+[w3] scene 207008 medium tgt=Perricone_MD_Neuropeptide_Fi safe_oacbf         succ=True fail=None coll=False dist=0 t=8.4s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W td_nom             succ=False fail=approach_stall coll=True dist=5 t=8.7s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W ant_nom            succ=True fail=None coll=True dist=4 t=7.0s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W ant_apf            succ=False fail=approach_stall coll=False dist=2 t=5.7s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W ant_cbf            succ=True fail=None coll=True dist=1 t=10.3s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W ant_oacbf          succ=False fail=slip coll=True dist=2 t=12.9s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W safe_nom           succ=True fail=None coll=True dist=3 t=9.9s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W safe_cbf           succ=False fail=slip coll=True dist=4 t=11.5s
+[w3] scene 307008 dense  tgt=Threshold_Bead_Cereal_Bowl_W safe_oacbf         succ=False fail=slip coll=True dist=1 t=12.3s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ td_nom             succ=False fail=approach_stall coll=False dist=0 t=9.2s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ ant_nom            succ=True fail=None coll=False dist=0 t=7.5s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ ant_apf            succ=True fail=None coll=False dist=0 t=9.1s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ ant_cbf            succ=True fail=None coll=False dist=0 t=8.2s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=13.2s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ safe_nom           succ=True fail=None coll=False dist=0 t=8.6s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ safe_cbf           succ=True fail=None coll=False dist=0 t=9.9s
+[w3] scene 407008 hidden tgt=Just_For_Men_Mustache_Beard_ safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=10.9s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack td_nom             succ=False fail=approach_stall coll=False dist=0 t=7.9s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack ant_nom            succ=False fail=slip coll=False dist=0 t=8.4s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack ant_apf            succ=False fail=slip coll=False dist=0 t=11.9s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack ant_cbf            succ=False fail=slip coll=False dist=0 t=11.7s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack ant_oacbf          succ=False fail=slip coll=False dist=0 t=11.9s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack safe_nom           succ=False fail=slip coll=False dist=0 t=8.5s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack safe_cbf           succ=False fail=slip coll=False dist=0 t=9.2s
+[w3] scene 107013 sparse tgt=Whey_Protein_Vanilla_12_Pack safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.3s
+[w3] scene 207013 medium tgt=SAMe_200                     td_nom             succ=False fail=approach_stall coll=False dist=0 t=7.0s
+[w3] scene 207013 medium tgt=SAMe_200                     ant_nom            succ=True fail=None coll=False dist=0 t=8.4s
+[w3] scene 207013 medium tgt=SAMe_200                     ant_apf            succ=True fail=None coll=False dist=0 t=10.5s
+[w3] scene 207013 medium tgt=SAMe_200                     ant_cbf            succ=True fail=None coll=False dist=0 t=12.4s
+[w3] scene 207013 medium tgt=SAMe_200                     ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=13.2s
+[w3] scene 207013 medium tgt=SAMe_200                     safe_nom           succ=True fail=None coll=False dist=0 t=9.1s
+[w3] scene 207013 medium tgt=SAMe_200                     safe_cbf           succ=True fail=None coll=False dist=0 t=10.3s
+[w3] scene 207013 medium tgt=SAMe_200                     safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=18.7s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.3s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        ant_nom            succ=False fail=slip coll=False dist=1 t=9.7s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        ant_apf            succ=False fail=slip coll=False dist=0 t=15.2s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        ant_cbf            succ=False fail=slip coll=False dist=1 t=23.4s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        ant_oacbf          succ=False fail=slip coll=False dist=1 t=28.0s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        safe_nom           succ=False fail=slip coll=False dist=0 t=10.7s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        safe_cbf           succ=False fail=slip coll=False dist=1 t=20.0s
+[w3] scene 307013 dense  tgt=Tag_Dishtowel_18_x_26        safe_oacbf         succ=False fail=slip coll=False dist=0 t=29.2s
+2026-09-29T19:38:23Z [1,028,050ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt td_nom             succ=True fail=None coll=False dist=0 t=7.3s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt ant_nom            succ=True fail=None coll=False dist=1 t=9.2s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt ant_apf            succ=True fail=None coll=False dist=1 t=10.8s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt ant_cbf            succ=True fail=None coll=False dist=1 t=11.6s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt ant_oacbf          succ=True fail=None coll=False dist=1 t=11.9s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt safe_nom           succ=True fail=None coll=False dist=1 t=8.5s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt safe_cbf           succ=True fail=None coll=False dist=1 t=9.7s
+[w3] scene 407013 hidden tgt=Justified_The_Complete_Fourt safe_oacbf         succ=True fail=None coll=False dist=1 t=12.3s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.5s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt ant_nom            succ=False fail=slip coll=False dist=0 t=9.0s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt ant_apf            succ=False fail=slip coll=False dist=0 t=11.1s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt ant_cbf            succ=False fail=slip coll=False dist=0 t=11.9s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt ant_oacbf          succ=False fail=slip coll=False dist=0 t=12.1s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt safe_nom           succ=False fail=slip coll=False dist=0 t=7.0s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt safe_cbf           succ=False fail=slip coll=False dist=0 t=12.1s
+[w3] scene 107018 sparse tgt=Justified_The_Complete_Fourt safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.2s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh td_nom             succ=True fail=None coll=True dist=0 t=7.3s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh ant_nom            succ=False fail=slip coll=False dist=0 t=9.1s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh ant_apf            succ=False fail=slip coll=False dist=0 t=14.5s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh ant_cbf            succ=False fail=slip coll=False dist=0 t=12.5s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh ant_oacbf          succ=True fail=None coll=False dist=0 t=12.1s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh safe_nom           succ=False fail=slip coll=False dist=0 t=8.1s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh safe_cbf           succ=False fail=slip coll=False dist=0 t=9.4s
+[w3] scene 207018 medium tgt=Womens_Bluefish_2Eye_Boat_Sh safe_oacbf         succ=True fail=None coll=False dist=0 t=11.5s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack td_nom             succ=False fail=approach_stall coll=True dist=1 t=7.3s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack ant_nom            succ=True fail=None coll=True dist=1 t=8.8s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack ant_apf            succ=False fail=approach_stall coll=True dist=1 t=11.5s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack ant_cbf            succ=True fail=None coll=True dist=1 t=11.1s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack ant_oacbf          succ=False fail=approach_stall coll=True dist=1 t=14.1s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack safe_nom           succ=False fail=slip coll=True dist=2 t=9.4s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack safe_cbf           succ=False fail=slip coll=True dist=3 t=13.8s
+[w3] scene 307018 dense  tgt=Whey_Protein_Vanilla_12_Pack safe_oacbf         succ=False fail=slip coll=True dist=4 t=15.1s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ td_nom             succ=True fail=None coll=False dist=0 t=9.7s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ ant_nom            succ=True fail=None coll=False dist=0 t=5.4s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ ant_apf            succ=False fail=approach_stall coll=False dist=0 t=9.0s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ ant_cbf            succ=True fail=None coll=False dist=0 t=4.4s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=4.5s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ safe_nom           succ=True fail=None coll=False dist=0 t=2.9s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ safe_cbf           succ=True fail=None coll=False dist=0 t=3.7s
+[w3] scene 407018 hidden tgt=Just_For_Men_Mustache_Beard_ safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=4.6s
+[w3] finished 16 scenes in 1393s
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260930_034532.log
+2026-09-29T19:45:32Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-09-29T19:45:32Z [1ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 39250
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-09-29T19:45:38Z [6,488ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-09-29T19:45:39Z [6,783ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-09-29T19:45:41Z [8,666ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-09-29T19:45:41Z [8,863ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-09-29T19:45:41Z [8,866ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-09-29T19:45:42Z [10,230ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-09-29T19:45:42Z [10,486ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-09-29T19:45:42Z [10,486ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-09-29T19:45:42Z [10,487ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-09-29T19:45:44Z [12,586ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-09-29T19:45:52Z [20,605ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w3] resuming with 128 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-09-30_03-45-55.log[0m
+[36m======================================================================================[0m
+
+[33m03:45:55 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m03:46:02 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-09-29T19:46:04Z [31,694ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-09-29T19:46:04Z [31,861ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w3] pool ready (40 objects), methods=['td_nom', 'ant_nom', 'ant_apf', 'ant_cbf', 'ant_oacbf', 'safe_nom', 'safe_cbf', 'safe_oacbf']
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  td_nom             succ=True fail=None coll=False dist=0 t=5.8s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  ant_nom            succ=True fail=None coll=False dist=0 t=6.8s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  ant_apf            succ=False fail=approach_stall coll=False dist=0 t=10.6s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  ant_cbf            succ=True fail=None coll=False dist=0 t=9.2s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  ant_oacbf          succ=True fail=None coll=False dist=0 t=9.3s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  safe_nom           succ=True fail=None coll=False dist=0 t=4.6s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  safe_cbf           succ=True fail=None coll=False dist=0 t=8.6s
+[w3] scene 108003 sparse tgt=FARM_ANIMAL                  safe_oacbf         succ=True fail=None coll=False dist=0 t=9.5s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu td_nom             succ=False fail=slip coll=True dist=0 t=11.7s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu ant_nom            succ=False fail=slip coll=True dist=1 t=9.2s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu ant_apf            succ=False fail=approach_stall coll=True dist=1 t=14.6s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu ant_cbf            succ=False fail=slip coll=True dist=1 t=9.4s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=14.7s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu safe_nom           succ=True fail=None coll=False dist=0 t=9.2s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu safe_cbf           succ=True fail=None coll=False dist=0 t=9.2s
+[w3] scene 208003 medium tgt=Fisher_price_Classic_Toys_Bu safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=14.6s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent td_nom             succ=True fail=None coll=False dist=1 t=5.6s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent ant_nom            succ=True fail=None coll=False dist=0 t=10.4s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent ant_apf            succ=False fail=approach_stall coll=False dist=0 t=16.6s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent ant_cbf            succ=True fail=None coll=False dist=1 t=12.7s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent ant_oacbf          succ=True fail=None coll=False dist=1 t=13.9s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent safe_nom           succ=True fail=None coll=False dist=1 t=10.1s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent safe_cbf           succ=True fail=None coll=False dist=1 t=13.4s
+[w3] scene 308003 dense  tgt=Brother_Ink_Cartridge_Magent safe_oacbf         succ=True fail=None coll=False dist=1 t=14.0s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ td_nom             succ=False fail=approach_stall coll=False dist=0 t=9.8s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ ant_nom            succ=True fail=None coll=False dist=0 t=7.7s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ ant_apf            succ=True fail=None coll=False dist=0 t=11.0s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ ant_cbf            succ=True fail=None coll=False dist=0 t=12.4s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=15.0s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ safe_nom           succ=True fail=None coll=False dist=0 t=10.4s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ safe_cbf           succ=True fail=None coll=False dist=0 t=12.3s
+[w3] scene 408003 hidden tgt=Just_For_Men_Mustache_Beard_ safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=14.5s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib td_nom             succ=False fail=no_grasp coll=False dist=0 t=3.7s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib ant_nom            succ=True fail=None coll=False dist=1 t=8.3s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib ant_apf            succ=False fail=approach_stall coll=False dist=0 t=10.7s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib ant_cbf            succ=True fail=None coll=False dist=1 t=16.4s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib ant_oacbf          succ=False fail=approach_timeout coll=False dist=0 t=14.8s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib safe_nom           succ=True fail=None coll=False dist=1 t=8.2s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib safe_cbf           succ=True fail=None coll=False dist=1 t=12.0s
+[w3] scene 108008 sparse tgt=Neat_Solutions_Character_Bib safe_oacbf         succ=True fail=None coll=False dist=1 t=15.5s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll td_nom             succ=True fail=None coll=True dist=3 t=9.6s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll ant_nom            succ=False fail=slip coll=False dist=2 t=7.7s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll ant_apf            succ=False fail=approach_stall coll=False dist=0 t=11.9s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll ant_cbf            succ=False fail=slip coll=False dist=1 t=12.3s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=15.4s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll safe_nom           succ=False fail=slip coll=False dist=1 t=8.4s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll safe_cbf           succ=False fail=slip coll=False dist=0 t=11.1s
+[w3] scene 208008 medium tgt=PureConnect_2_Color_BlckBrll safe_oacbf         succ=False fail=approach_timeout coll=False dist=0 t=17.9s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.9s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     ant_nom            succ=False fail=slip coll=True dist=1 t=9.4s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     ant_apf            succ=False fail=approach_timeout coll=True dist=1 t=16.0s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     ant_cbf            succ=False fail=slip coll=True dist=1 t=16.8s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     ant_oacbf          succ=False fail=slip coll=True dist=1 t=27.7s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     safe_nom           succ=False fail=slip coll=True dist=1 t=12.4s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     safe_cbf           succ=False fail=slip coll=True dist=1 t=16.2s
+[w3] scene 308008 dense  tgt=Rubbermaid_Large_Drainer     safe_oacbf         succ=False fail=slip coll=True dist=1 t=25.1s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              td_nom             succ=False fail=slip coll=False dist=0 t=5.4s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              ant_nom            succ=True fail=None coll=False dist=1 t=8.6s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              ant_apf            succ=False fail=slip coll=False dist=0 t=11.9s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              ant_cbf            succ=False fail=slip coll=False dist=0 t=11.0s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              ant_oacbf          succ=False fail=slip coll=False dist=0 t=10.8s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              safe_nom           succ=False fail=slip coll=False dist=0 t=7.2s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              safe_cbf           succ=False fail=slip coll=False dist=0 t=13.1s
+[w3] scene 408008 hidden tgt=FYW_ALTERNATION              safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.6s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  td_nom             succ=False fail=slip coll=False dist=0 t=5.7s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  ant_nom            succ=False fail=slip coll=False dist=0 t=7.2s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  ant_apf            succ=False fail=slip coll=False dist=0 t=11.5s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  ant_cbf            succ=False fail=slip coll=False dist=0 t=10.7s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=17.8s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  safe_nom           succ=False fail=slip coll=False dist=0 t=10.5s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  safe_cbf           succ=False fail=slip coll=False dist=0 t=9.3s
+[w3] scene 108013 sparse tgt=JarroDophilusFOS_Value_Size  safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=13.0s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB td_nom             succ=False fail=approach_stall coll=True dist=2 t=12.3s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB ant_nom            succ=False fail=approach_timeout coll=True dist=2 t=15.5s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB ant_apf            succ=False fail=approach_stall coll=True dist=2 t=13.3s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB ant_cbf            succ=False fail=slip coll=True dist=2 t=16.3s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB ant_oacbf          succ=False fail=approach_stall coll=True dist=2 t=16.1s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB safe_nom           succ=False fail=slip coll=True dist=1 t=11.2s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB safe_cbf           succ=False fail=slip coll=True dist=1 t=11.8s
+[w3] scene 208013 medium tgt=Glycerin_11_Color_AqrsDrsdnB safe_oacbf         succ=False fail=approach_stall coll=True dist=1 t=14.3s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ td_nom             succ=False fail=approach_stall coll=True dist=1 t=9.0s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ ant_nom            succ=True fail=None coll=True dist=1 t=11.3s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ ant_apf            succ=False fail=approach_stall coll=True dist=1 t=14.0s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ ant_cbf            succ=True fail=None coll=True dist=1 t=11.0s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ ant_oacbf          succ=False fail=approach_stall coll=True dist=1 t=13.8s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ safe_nom           succ=False fail=slip coll=True dist=1 t=9.9s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ safe_cbf           succ=False fail=slip coll=True dist=1 t=13.5s
+[w3] scene 308013 dense  tgt=Just_For_Men_Mustache_Beard_ safe_oacbf         succ=False fail=slip coll=True dist=1 t=13.8s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    td_nom             succ=False fail=slip coll=False dist=0 t=12.4s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    ant_nom            succ=False fail=slip coll=False dist=0 t=14.0s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    ant_apf            succ=True fail=None coll=False dist=1 t=15.5s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    ant_cbf            succ=False fail=slip coll=False dist=0 t=15.4s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=17.0s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    safe_nom           succ=False fail=slip coll=False dist=0 t=9.5s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    safe_cbf           succ=False fail=slip coll=False dist=0 t=12.1s
+[w3] scene 408013 hidden tgt=Perricone_MD_Photo_Plasma    safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.3s
+2026-09-29T20:05:43Z [1,210,682ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      td_nom             succ=True fail=None coll=False dist=0 t=4.4s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      ant_nom            succ=False fail=slip coll=False dist=0 t=7.6s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      ant_apf            succ=True fail=None coll=False dist=0 t=15.2s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      ant_cbf            succ=False fail=slip coll=False dist=0 t=11.4s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=17.2s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      safe_nom           succ=False fail=slip coll=False dist=0 t=10.1s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      safe_cbf           succ=False fail=slip coll=False dist=0 t=11.9s
+[w3] scene 108018 sparse tgt=Perricone_MD_Chia_Serum      safe_oacbf         succ=False fail=slip coll=False dist=0 t=12.3s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu td_nom             succ=True fail=None coll=True dist=0 t=12.7s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu ant_nom            succ=True fail=None coll=False dist=0 t=8.3s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu ant_apf            succ=False fail=transit_stall coll=False dist=0 t=11.9s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu ant_cbf            succ=False fail=slip coll=False dist=0 t=9.4s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu ant_oacbf          succ=True fail=None coll=False dist=0 t=18.2s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu safe_nom           succ=False fail=slip coll=False dist=0 t=9.0s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu safe_cbf           succ=False fail=slip coll=False dist=0 t=8.4s
+[w3] scene 208018 medium tgt=Fisher_price_Classic_Toys_Bu safe_oacbf         succ=False fail=slip coll=False dist=0 t=10.7s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          td_nom             succ=True fail=None coll=True dist=6 t=6.9s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          ant_nom            succ=True fail=None coll=True dist=6 t=8.1s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          ant_apf            succ=False fail=approach_stall coll=False dist=2 t=10.4s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          ant_cbf            succ=True fail=None coll=False dist=5 t=8.1s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          ant_oacbf          succ=True fail=None coll=False dist=5 t=8.8s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          safe_nom           succ=False fail=slip coll=True dist=5 t=6.6s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          safe_cbf           succ=False fail=slip coll=False dist=2 t=6.9s
+[w3] scene 308018 dense  tgt=Great_Jones_Wingtip          safe_oacbf         succ=False fail=slip coll=False dist=4 t=5.8s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      td_nom             succ=True fail=None coll=False dist=0 t=2.0s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      ant_nom            succ=True fail=None coll=False dist=0 t=2.3s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      ant_apf            succ=False fail=approach_stall coll=False dist=0 t=3.1s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      ant_cbf            succ=True fail=None coll=False dist=0 t=4.9s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=3.8s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      safe_nom           succ=True fail=None coll=False dist=0 t=2.4s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      safe_cbf           succ=True fail=None coll=False dist=0 t=3.0s
+[w3] scene 408018 hidden tgt=Perricone_MD_Chia_Serum      safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=5.4s
+[w3] finished 16 scenes in 1456s
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nat-nus/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/nat-nus/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260930_041039.log
+2026-09-29T20:10:39Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/8a56ac04-2289-434f-0ed8c093-44062cce.dmp'
+2026-09-29T20:10:39Z [0ms] [Warning] [carb.crashreporter-breakpad.plugin] [previous crash] preventing upload of minidump due to user opt-out: '/home/nat-nus/isaacsim/kit/data/Kit/Isaac-Sim/5.1/0346b47e-f0a8-4192-fab9d8be-cad98b17.dmp'
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+MESA: warning: Driver does not support the 0x7d67 PCI ID.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.95.05     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | f6994a1f.. |
+|     |                                  |        |     |            | 2         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 7 265K
+| Cores: 20 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63562 | Free Memory: 39022
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-09-29T20:10:47Z [7,509ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-09-29T20:10:47Z [7,542ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-09-29T20:10:48Z [8,816ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-09-29T20:10:48Z [9,016ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-09-29T20:10:48Z [9,019ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-09-29T20:10:50Z [10,466ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-09-29T20:10:50Z [10,760ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-09-29T20:10:50Z [10,760ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-09-29T20:10:50Z [10,761ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-09-29T20:10:54Z [14,211ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-09-29T20:11:02Z [22,176ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+[w3] resuming with 256 finished trials
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-09-30_04-11-04.log[0m
+[36m======================================================================================[0m
+
+[33m04:11:04 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[33m04:11:11 [xform_prim_view.py] WARNING: Fabric mode with Warp fabric-array operations is not supported on CPU devices. While Fabric itself can run on both CPU and GPU, our batch Warp kernels for fabric-array operations require CUDA and are not reliable on the CPU backend. To ensure stability, Fabric is being disabled and execution will fall back to standard USD operations on the CPU. This may impact performance.[0m
+2026-09-29T20:11:12Z [32,996ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (371, 278) is below minimal input resolution of 300.
+2026-09-29T20:11:13Z [33,251ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+[w3] pool ready (40 objects), methods=['td_nom', 'ant_nom', 'ant_apf', 'ant_cbf', 'ant_oacbf', 'safe_nom', 'safe_cbf', 'safe_oacbf']
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.5s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G ant_nom            succ=False fail=slip coll=False dist=1 t=6.5s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G ant_apf            succ=False fail=approach_stall coll=False dist=0 t=8.1s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G ant_cbf            succ=False fail=slip coll=False dist=1 t=25.6s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G ant_oacbf          succ=False fail=slip coll=False dist=0 t=42.0s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G safe_nom           succ=False fail=slip coll=False dist=1 t=9.2s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G safe_cbf           succ=False fail=slip coll=False dist=0 t=23.9s
+[w3] scene 109003 sparse tgt=Cole_Hardware_Plant_Saucer_G safe_oacbf         succ=False fail=slip coll=False dist=0 t=40.5s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl td_nom             succ=True fail=None coll=True dist=3 t=5.8s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl ant_nom            succ=False fail=slip coll=False dist=2 t=8.1s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl ant_apf            succ=False fail=transit_stall coll=False dist=0 t=9.8s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl ant_cbf            succ=False fail=slip coll=False dist=3 t=9.4s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=11.1s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl safe_nom           succ=False fail=slip coll=False dist=2 t=6.5s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl safe_cbf           succ=False fail=slip coll=False dist=2 t=13.1s
+[w3] scene 209003 medium tgt=Cole_Hardware_Mug_Classic_Bl safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=13.6s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.6s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch ant_nom            succ=False fail=slip coll=False dist=0 t=9.1s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch ant_apf            succ=False fail=approach_stall coll=False dist=0 t=12.4s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch ant_cbf            succ=False fail=slip coll=False dist=0 t=15.2s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=9.9s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch safe_nom           succ=False fail=slip coll=False dist=0 t=8.0s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch safe_cbf           succ=False fail=slip coll=False dist=0 t=7.7s
+[w3] scene 309003 dense  tgt=Tag_Dishtowel_Waffle_Gray_Ch safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=12.3s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero td_nom             succ=True fail=None coll=False dist=0 t=5.9s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero ant_nom            succ=True fail=None coll=False dist=0 t=6.8s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero ant_apf            succ=True fail=None coll=False dist=0 t=9.4s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero ant_cbf            succ=False fail=slip coll=False dist=0 t=7.9s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero ant_oacbf          succ=False fail=slip coll=False dist=0 t=13.4s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero safe_nom           succ=False fail=slip coll=False dist=0 t=6.6s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero safe_cbf           succ=True fail=None coll=False dist=0 t=10.2s
+[w3] scene 409003 hidden tgt=Borage_GLA240Gamma_Tocophero safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=11.3s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.7s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    ant_nom            succ=True fail=None coll=False dist=0 t=9.4s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    ant_apf            succ=True fail=None coll=False dist=0 t=8.5s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    ant_cbf            succ=True fail=None coll=False dist=0 t=8.8s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    ant_oacbf          succ=True fail=None coll=False dist=0 t=13.8s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    safe_nom           succ=True fail=None coll=False dist=0 t=8.6s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    safe_cbf           succ=True fail=None coll=False dist=0 t=13.6s
+[w3] scene 109008 sparse tgt=My_First_Wiggle_Crocodile    safe_oacbf         succ=True fail=None coll=False dist=0 t=11.0s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.4s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ ant_nom            succ=False fail=slip coll=False dist=1 t=9.6s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ ant_apf            succ=False fail=approach_timeout coll=False dist=0 t=12.4s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ ant_cbf            succ=False fail=slip coll=False dist=0 t=13.0s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ ant_oacbf          succ=False fail=slip coll=False dist=0 t=13.0s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ safe_nom           succ=False fail=slip coll=False dist=1 t=6.6s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ safe_cbf           succ=False fail=slip coll=False dist=2 t=11.4s
+[w3] scene 209008 medium tgt=Asus_Z87PRO_Motherboard_ATX_ safe_oacbf         succ=False fail=slip coll=False dist=1 t=17.3s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu td_nom             succ=True fail=None coll=False dist=0 t=9.6s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_nom            succ=True fail=None coll=False dist=0 t=9.2s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_apf            succ=False fail=approach_stall coll=False dist=0 t=17.7s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_cbf            succ=True fail=None coll=False dist=0 t=15.1s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_oacbf          succ=True fail=None coll=False dist=0 t=19.5s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_nom           succ=False fail=slip coll=False dist=0 t=10.6s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_cbf           succ=False fail=slip coll=False dist=0 t=13.0s
+[w3] scene 309008 dense  tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_oacbf         succ=False fail=slip coll=False dist=0 t=13.1s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu td_nom             succ=True fail=None coll=False dist=0 t=13.6s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_nom            succ=False fail=slip coll=False dist=0 t=17.5s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_apf            succ=False fail=slip coll=False dist=0 t=14.6s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_cbf            succ=False fail=slip coll=False dist=0 t=17.3s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=16.4s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_nom           succ=False fail=slip coll=False dist=0 t=9.4s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_cbf           succ=False fail=slip coll=False dist=0 t=8.4s
+[w3] scene 409008 hidden tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_oacbf         succ=False fail=slip coll=False dist=0 t=9.4s
+[w3] scene 109013 sparse tgt=LTyrosine                    td_nom             succ=True fail=None coll=False dist=1 t=5.9s
+[w3] scene 109013 sparse tgt=LTyrosine                    ant_nom            succ=True fail=None coll=False dist=1 t=8.2s
+[w3] scene 109013 sparse tgt=LTyrosine                    ant_apf            succ=False fail=approach_stall coll=False dist=0 t=11.9s
+[w3] scene 109013 sparse tgt=LTyrosine                    ant_cbf            succ=True fail=None coll=False dist=1 t=9.4s
+[w3] scene 109013 sparse tgt=LTyrosine                    ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=11.4s
+[w3] scene 109013 sparse tgt=LTyrosine                    safe_nom           succ=False fail=slip coll=False dist=1 t=7.1s
+[w3] scene 109013 sparse tgt=LTyrosine                    safe_cbf           succ=False fail=slip coll=False dist=1 t=8.0s
+[w3] scene 109013 sparse tgt=LTyrosine                    safe_oacbf         succ=False fail=approach_stall coll=False dist=1 t=11.5s
+[w3] scene 209013 medium tgt=LTyrosine                    td_nom             succ=False fail=approach_stall coll=False dist=0 t=11.1s
+[w3] scene 209013 medium tgt=LTyrosine                    ant_nom            succ=False fail=slip coll=False dist=0 t=9.7s
+[w3] scene 209013 medium tgt=LTyrosine                    ant_apf            succ=False fail=approach_stall coll=False dist=0 t=12.0s
+[w3] scene 209013 medium tgt=LTyrosine                    ant_cbf            succ=False fail=slip coll=False dist=0 t=10.5s
+[w3] scene 209013 medium tgt=LTyrosine                    ant_oacbf          succ=False fail=slip coll=False dist=0 t=10.9s
+[w3] scene 209013 medium tgt=LTyrosine                    safe_nom           succ=True fail=None coll=False dist=0 t=8.9s
+[w3] scene 209013 medium tgt=LTyrosine                    safe_cbf           succ=False fail=slip coll=False dist=0 t=8.1s
+[w3] scene 209013 medium tgt=LTyrosine                    safe_oacbf         succ=False fail=slip coll=False dist=0 t=8.7s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             td_nom             succ=False fail=approach_stall coll=False dist=0 t=10.1s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             ant_nom            succ=True fail=None coll=False dist=0 t=9.7s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             ant_apf            succ=False fail=approach_stall coll=False dist=0 t=12.4s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             ant_cbf            succ=True fail=None coll=False dist=0 t=14.0s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=17.1s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             safe_nom           succ=False fail=slip coll=False dist=0 t=10.2s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             safe_cbf           succ=False fail=slip coll=False dist=0 t=13.6s
+[w3] scene 309013 dense  tgt=Mist_Wipe_Warmer             safe_oacbf         succ=False fail=slip coll=False dist=0 t=13.0s
+2026-09-29T20:28:36Z [1,076,359ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo td_nom             succ=True fail=None coll=False dist=0 t=7.9s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo ant_nom            succ=True fail=None coll=False dist=1 t=9.6s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo ant_apf            succ=True fail=None coll=False dist=0 t=12.2s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo ant_cbf            succ=True fail=None coll=False dist=0 t=12.6s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=14.3s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo safe_nom           succ=True fail=None coll=False dist=0 t=10.3s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo safe_cbf           succ=True fail=None coll=False dist=0 t=10.6s
+[w3] scene 409013 hidden tgt=Kid_Icarus_Uprising_Nintendo safe_oacbf         succ=True fail=None coll=False dist=0 t=12.0s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer td_nom             succ=False fail=closed_empty coll=False dist=0 t=5.5s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer ant_nom            succ=False fail=slip coll=False dist=0 t=6.8s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer ant_apf            succ=False fail=slip coll=False dist=0 t=14.3s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer ant_cbf            succ=False fail=slip coll=False dist=0 t=8.6s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer ant_oacbf          succ=False fail=slip coll=False dist=0 t=12.1s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer safe_nom           succ=False fail=slip coll=False dist=0 t=10.1s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer safe_cbf           succ=False fail=slip coll=False dist=0 t=11.8s
+[w3] scene 109018 sparse tgt=Down_To_Earth_Orchid_Pot_Cer safe_oacbf         succ=False fail=slip coll=False dist=0 t=11.7s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu td_nom             succ=False fail=no_grasp coll=False dist=0 t=0.4s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_nom            succ=False fail=slip coll=False dist=0 t=8.8s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_apf            succ=False fail=slip coll=False dist=0 t=13.0s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_cbf            succ=False fail=slip coll=False dist=0 t=12.0s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu ant_oacbf          succ=False fail=slip coll=False dist=0 t=14.5s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_nom           succ=False fail=slip coll=False dist=0 t=7.9s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_cbf           succ=False fail=slip coll=False dist=0 t=9.8s
+[w3] scene 209018 medium tgt=The_Coffee_Bean_Tea_Leaf_KCu safe_oacbf         succ=False fail=slip coll=False dist=0 t=8.5s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G td_nom             succ=True fail=None coll=False dist=1 t=5.0s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G ant_nom            succ=True fail=None coll=False dist=1 t=8.0s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G ant_apf            succ=True fail=None coll=False dist=1 t=13.4s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G ant_cbf            succ=True fail=None coll=False dist=1 t=10.3s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G ant_oacbf          succ=False fail=approach_stall coll=False dist=0 t=11.5s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G safe_nom           succ=True fail=None coll=False dist=1 t=7.8s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G safe_cbf           succ=True fail=None coll=False dist=1 t=8.7s
+[w3] scene 309018 dense  tgt=Cole_Hardware_Plant_Saucer_G safe_oacbf         succ=False fail=approach_stall coll=False dist=0 t=10.5s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa td_nom             succ=False fail=approach_stall coll=False dist=0 t=5.5s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa ant_nom            succ=True fail=None coll=False dist=0 t=4.5s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa ant_apf            succ=True fail=None coll=False dist=0 t=5.1s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa ant_cbf            succ=True fail=None coll=False dist=0 t=5.4s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa ant_oacbf          succ=True fail=None coll=False dist=0 t=5.6s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa safe_nom           succ=True fail=None coll=False dist=0 t=3.6s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa safe_cbf           succ=True fail=None coll=False dist=0 t=5.1s
+[w3] scene 409018 hidden tgt=Weston_No_33_Signature_Sausa safe_oacbf         succ=True fail=None coll=False dist=0 t=3.6s
+[w3] finished 16 scenes in 1421s

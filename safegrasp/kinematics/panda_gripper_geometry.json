@@ -1,0 +1,62 @@
+{
+ "description": "Franka hand collision geometry in the TCP frame (TCP = panda_hand + 0.1034 m along hand z; x = hand x, y = closing axis, z = approach). AABBs of the Isaac Lab FRANKA_PANDA_HIGH_PD_CFG collision hulls, symmetrised in x/y. Metres.",
+ "tcp_offset": 0.1034,
+ "max_width": 0.08,
+ "palm_lo": [
+  -0.03164,
+  -0.10399,
+  -0.12932
+ ],
+ "palm_hi": [
+  0.03164,
+  0.10399,
+  -0.03744
+ ],
+ "wrist_lo": [
+  -0.0439,
+  -0.08793,
+  -0.15841
+ ],
+ "wrist_hi": [
+  0.0439,
+  0.08793,
+  -0.10356
+ ],
+ "finger_x": [
+  -0.0105,
+  0.0105
+ ],
+ "finger_z": [
+  -0.04487,
+  0.00885
+ ],
+ "finger_offset": -0.00013,
+ "finger_thickness": 0.02654,
+ "pad_z": [
+  -0.01431,
+  0.0087
+ ],
+ "notes": {
+  "width": "w = pad-to-pad distance = 2 x finger joint position (finger_joint1/2 in [0, 0.04]); verified in Isaac: finger body origin at hand y = +-q_f, pad plane at finger-frame y = 0",
+  "tcp_vs_pads": "TCP (z = 0, midway between the pad planes) lies on the flat pad face, which spans TCP z [-0.0143, 0.0087] (centre -0.0028); fingertips at TCP z = 0.0088 (TCP is 8.8 mm behind the fingertips), finger root at z = -0.0449; the finger boxes overlap the palm by 7.4 mm in z",
+  "pad_tolerance_m": 0.0005,
+  "palm_raw_y": [
+   -0.10399,
+   0.10043
+  ],
+  "wrist_raw_xy": [
+   [
+    -0.0439,
+    0.04387
+   ],
+   [
+    -0.05389,
+    0.08793
+   ]
+  ],
+  "finger_raw_x": [
+   -0.01048,
+   0.0105
+  ]
+ }
+}

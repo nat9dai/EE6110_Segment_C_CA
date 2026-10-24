@@ -1,0 +1,13 @@
+data/
+scratch/
+__pycache__/
+*.pyc
+results/raw_frames/
+results/**/*.npz
+results/raw/dev*/
+results/raw/*/traces/
+results/film/
+results/raw/*/rgb/
+results/raw/val/
+results/raw/phys16/
+results/raw/speed/
