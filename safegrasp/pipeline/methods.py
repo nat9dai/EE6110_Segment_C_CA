@@ -7,7 +7,7 @@ from dataclasses import dataclass, field, replace
 @dataclass(frozen=True)
 class Method:
     name: str
-    proposer: str                 # 'topdown' | 'antipodal' | 'safe'
+    proposer: str                 # 'topdown' | 'antipodal' | 'safe' | 'ggcnn' | 'vgn'
     executor: str                 # 'nominal' | 'apf' | 'cbf' | 'oacbf'
     views: tuple = ("main",)
     alpha: float = 5.0            # CBF class-K gain [1/s]
@@ -17,7 +17,6 @@ class Method:
     unk_soft: bool = True         # unknown-space barrier has slack
     carve_radius: float = 0.02    # [m] unknown voxels this close to the target count as target
     noise: float = 1.0            # depth-noise multiplier (0 = perfect depth)
-    recover: str = "none"         # on-deadlock recovery: 'none' | 'reobserve' | 'relax'
     notes: str = ""
 
     def with_(self, **kw) -> "Method":
@@ -26,6 +25,8 @@ class Method:
 
 BASE = {
     "td_nom": Method("td_nom", "topdown", "nominal"),
+    "ggcnn": Method("ggcnn", "ggcnn", "nominal"),           # learned, top-down
+    "vgn": Method("vgn", "vgn", "nominal"),                 # learned, 6-DoF volumetric
     "ant_nom": Method("ant_nom", "antipodal", "nominal"),
     "ant_apf": Method("ant_apf", "antipodal", "apf"),
     "ant_cbf": Method("ant_cbf", "antipodal", "cbf"),
@@ -49,11 +50,8 @@ def get_method(spec: str) -> Method:
             kw[k] = tuple(v.split("+"))
         elif k in ("unk_soft",):
             kw[k] = v.lower() in ("1", "true", "yes")
-        elif k in ("proposer", "executor", "notes", "recover"):
+        elif k in ("proposer", "executor", "notes"):
             kw[k] = v
         else:
             kw[k] = float(v)
-    from safegrasp.pipeline.recovery import RECOVER_MODES
-    if kw.get("recover", "none") not in RECOVER_MODES:  # fail at launch, not inside every trial
-        raise ValueError(f"unknown recover mode {kw['recover']!r} in {spec!r}")
     return m.with_(name=spec, **kw)

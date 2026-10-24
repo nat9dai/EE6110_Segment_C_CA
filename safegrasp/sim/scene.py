@@ -26,6 +26,7 @@ CAMERAS = {
     "left": ((0.55, 0.60, 0.55), (0.55, 0.0, 0.05)),
     "right": ((0.55, -0.60, 0.55), (0.55, 0.0, 0.05)),
     "close": ((0.55, 0.35, 0.20), (0.55, 0.0, 0.05)),   # close-up camera, figures only
+    "wrist": ((0.55, 0.10, 0.45), (0.55, 0.0, 0.05)),   # moved to the hand on each capture
 }
 
 
@@ -42,6 +43,9 @@ class SceneCfg:
     park_origin: tuple = (-30.0, 30.0)
     obj_pos_iters: int = 16        # PhysX iterations, as in the Isaac Lab lift task
     obj_vel_iters: int = 1
+    basket_pos: tuple | None = None               # (x, y) [m]; None = no basket
+    basket_size: tuple = (0.17, 0.17, 0.075)      # inner (x, y, wall height) [m]
+    basket_color: tuple = (0.85, 0.11, 0.11)      # distinct so RGB can find it
 
 
 class GraspScene:
@@ -49,8 +53,7 @@ class GraspScene:
         self.cfg = cfg
         self.K = len(cfg.pool)
         sim_cfg = sim_utils.SimulationCfg(dt=cfg.dt, device=cfg.device, render_interval=cfg.decimation)
-        sim_cfg.physx.bounce_threshold_velocity = 0.01
-        sim_cfg.physx.friction_correlation_distance = 0.00625
+        # Isaac Lab 3.0 has no SimulationCfg.physx, so the PhysX bounce/friction settings stay default
         self.sim = sim_utils.SimulationContext(sim_cfg)
         self.sim.set_camera_view((1.6, 0.9, 1.0), (0.5, 0.0, 0.1))
 
@@ -60,7 +63,13 @@ class GraspScene:
         sim_utils.DomeLightCfg(intensity=1500.0, color=(0.95, 0.95, 1.0)).func("/World/dome", sim_utils.DomeLightCfg(intensity=1500.0))
         sim_utils.DistantLightCfg(intensity=2500.0, angle=1.0).func("/World/sun", sim_utils.DistantLightCfg(intensity=2500.0))
 
+        if cfg.basket_pos is not None:
+            self._spawn_basket(cfg.basket_pos, cfg.basket_size, cfg.basket_color)
+
         rcfg = FRANKA_PANDA_HIGH_PD_CFG.replace(prim_path="/World/Robot")
+        # the Isaac 6.0 asset root has no Franka USD (404); the 4.5 one is identical
+        rcfg.spawn.usd_path = ("https://omniverse-content-production.s3-us-west-2.amazonaws.com/"
+                               "Assets/Isaac/4.5/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable.usd")
         rcfg.spawn.activate_contact_sensors = cfg.contact_sensing
         self.robot = Articulation(rcfg)
 
@@ -234,12 +243,41 @@ class GraspScene:
             out.append(torch.linalg.norm(fm[0, 0], dim=-1).cpu().numpy())
         return np.stack(out)
 
+    def _spawn_basket(self, pos, size, color):
+        """Spawn an open-top basket as static colliders; pick-and-place finds it by perception, not ``pos``."""
+        cx, cy = float(pos[0]), float(pos[1])
+        sx, sy, h = float(size[0]), float(size[1]), float(size[2])
+        tw = 0.012  # wall thickness [m]
+        mat = sim_utils.PreviewSurfaceCfg(diffuse_color=tuple(float(c) for c in color), roughness=0.85)
+        phys = sim_utils.RigidBodyMaterialCfg(static_friction=0.9, dynamic_friction=0.7)
+        coll = sim_utils.CollisionPropertiesCfg()
+
+        def box(name, bsize, bpos):
+            c = sim_utils.CuboidCfg(size=bsize, collision_props=coll, visual_material=mat, physics_material=phys)
+            c.func(f"/World/Basket/{name}", c, translation=bpos)
+
+        box("floor", (sx + 2 * tw, sy + 2 * tw, tw), (cx, cy, tw / 2))
+        box("wall_xp", (tw, sy + 2 * tw, h), (cx + sx / 2 + tw / 2, cy, h / 2))
+        box("wall_xn", (tw, sy + 2 * tw, h), (cx - sx / 2 - tw / 2, cy, h / 2))
+        box("wall_yp", (sx + 2 * tw, tw, h), (cx, cy + sy / 2 + tw / 2, h / 2))
+        box("wall_yn", (sx + 2 * tw, tw, h), (cx, cy - sy / 2 - tw / 2, h / 2))
+
     def look_at(self, name, eye, target):
         """Point camera ``name`` at ``target`` from ``eye``."""
         cam = self.cams[name]
         cam.set_world_poses_from_view(torch.tensor([eye], device=self.device, dtype=torch.float32),
                                       torch.tensor([target], device=self.device, dtype=torch.float32))
         cam.reset()
+
+    def wrist_capture(self, panda, q, grasp_pt=None):
+        """Return a wrist-camera View of the grasp point, from beside the hand so the fingers do not block it."""
+        T_h = panda.fk_all(q)["panda_hand"]
+        hx, hz, hpos = T_h[:3, 0], T_h[:3, 2], T_h[:3, 3]
+        tcp = hpos + 0.1034 * hz
+        tgt = np.asarray(grasp_pt, float) if grasp_pt is not None else tcp + 0.06 * hz
+        eye = hpos + 0.11 * hx - 0.11 * hz
+        self.look_at("wrist", tuple(float(x) for x in eye), tuple(float(x) for x in tgt))
+        return self.capture(("wrist",), n_render=2, with_rgb=False)[0]
 
     def capture(self, names=None, n_render=3, with_rgb=False):
         """Render and return a list of :class:`View` (+ RGB images if requested)."""
@@ -253,7 +291,8 @@ class GraspScene:
             depth = cam.data.output["distance_to_image_plane"][0, ..., 0].cpu().numpy().astype(np.float32)
             depth[~np.isfinite(depth)] = 0.0
             seg_raw = cam.data.output["instance_id_segmentation_fast"][0, ..., 0].cpu().numpy()
-            info = cam.data.info[0]["instance_id_segmentation_fast"]["idToLabels"]
+            # Isaac Lab 3.0: cam.data.info is a dict keyed by annotator name
+            info = cam.data.info["instance_id_segmentation_fast"]["idToLabels"]
             lut = {}
             for k, path in info.items():
                 kid = int(k)
@@ -270,6 +309,8 @@ class GraspScene:
             K = cam.data.intrinsic_matrices[0].cpu().numpy().astype(np.float64)
             pos = cam.data.pos_w[0].cpu().numpy().astype(np.float64)
             q = cam.data.quat_w_ros[0].cpu().numpy().astype(np.float64)
+            # Isaac Lab 3.0 gives quat_w_ros as (x, y, z, w); _quat_to_R wants (w, x, y, z)
+            q = np.array([q[3], q[0], q[1], q[2]])
             T = np.eye(4)
             T[:3, :3] = _quat_to_R(q)
             T[:3, 3] = pos

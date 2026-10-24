@@ -1,0 +1,32 @@
+{
+  "task": "pick-and-place into an autonomously-detected basket, with learned (SAM) segmentation",
+  "setup": {
+    "isaac_sim": "6.1.0 (port branch)",
+    "segmentation": "Segment Anything (ViT-B), single main camera, CPU",
+    "method": "ant_nom (antipodal + nominal executor)",
+    "scenario": "medium clutter (~6 objects)",
+    "target": "first visible reachable object per scene (default rule)",
+    "basket": {"physical_xy": [0.58, -0.33], "size_inner": [0.17, 0.17, 0.075], "detection": "detect_basket (colour + depth, bbox centre)"},
+    "place_success": "object reaches the DETECTED basket centre within place_tol=0.11 m"
+  },
+  "trials": [
+    {"seed": 1,  "target": "11pro_SL_TRX_FG",            "basket_err_m": 0.008, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.054},
+    {"seed": 2,  "target": "2_of_Jenga_Classic_Game",    "basket_err_m": 0.008, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.025},
+    {"seed": 3,  "target": "11pro_SL_TRX_FG",            "basket_err_m": 0.008, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.023},
+    {"seed": 4,  "target": "2_of_Jenga_Classic_Game",    "basket_err_m": 0.226, "picked": false, "placed": false, "fail": "slip",     "place_dist_m": 0.053},
+    {"seed": 5,  "target": "11pro_SL_TRX_FG",            "basket_err_m": 0.193, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.037, "note": "basket detection 19 cm off (occluded) -> placed at detected spot, likely NOT in the real basket"},
+    {"seed": 6,  "target": "3D_Dollhouse_Lamp",          "basket_err_m": 0.008, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.017},
+    {"seed": 7,  "target": "3D_Dollhouse_Happy_Brother", "basket_err_m": 0.052, "picked": false, "placed": false, "fail": "slip",     "place_dist_m": 0.424},
+    {"seed": 8,  "target": "30_CONSTRUCTION_SET",        "basket_err_m": 0.008, "picked": false, "placed": false, "fail": "slip",     "place_dist_m": 0.208},
+    {"seed": 9,  "target": "2_of_Jenga_Classic_Game",    "basket_err_m": 0.008, "picked": false, "placed": false, "fail": "no_grasp", "place_dist_m": null},
+    {"seed": 10, "target": "3D_Dollhouse_Sink",          "basket_err_m": 0.008, "picked": true,  "placed": true,  "fail": null,       "place_dist_m": 0.023}
+  ],
+  "summary": {
+    "n": 10,
+    "pick_grasp_and_carry": {"ok": 6, "rate": 0.60},
+    "place_into_detected_basket": {"ok": 6, "rate": 0.60},
+    "end_to_end_into_real_basket": {"ok": 5, "rate": 0.50, "note": "seed 5 excluded: detection 19 cm off, object placed outside the real basket"},
+    "basket_detection_err_m": {"mean": 0.053, "max": 0.226, "below_0.01": 7, "above_0.19": 2},
+    "failures": {"slip": 3, "no_grasp": 1}
+  }
+}

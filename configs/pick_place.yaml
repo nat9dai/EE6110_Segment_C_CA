@@ -1,0 +1,14 @@
+# Settings for scripts/pick_place_sam.py; env vars such as EPISODE_TARGET override them.
+
+seed: 11              # scene layout seed
+kind: medium          # sparse | medium | dense | hidden
+method: ant_nom       # ant_nom | ant_cbf | safe_oacbf | ...
+
+# "" = first visible object; or a name or substring ("Tape"), slot index ("5") or world x,y ("0.41,0.10")
+target: ""
+
+basket: [0.58, -0.33]  # true basket x, y; the run places into the detected position
+place_tol: 0.11        # max distance from the basket centre that counts as placed, m
+
+# "" uses $SAM_CKPT or data/sam_vit_b_01ec64.pth
+sam_checkpoint: ""
