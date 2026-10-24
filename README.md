@@ -27,11 +27,23 @@ that changes the joint velocities as little as possible while keeping the arm cl
 filter treats the hidden space as possibly occupied. When the arm stalls, the robot looks at the scene
 again with two side cameras and carries on with the same grasp.
 
+Both clips below come from Isaac Sim 5.1 and play at twice real speed.
+
+![Scene 407001: no filter against SafeGrasp](media/collision_407001.gif)
+
+In scene 407001, the unfiltered grasp presses a finger on an object behind the target and only lifts
+the target on its third attempt. SafeGrasp touches nothing and lifts it on the first attempt.
+
+![Scene 408004: the CBF filter alone against SafeGrasp](media/recovery_408004.gif)
+
+In scene 408004, the filter alone stalls on the approach and never reaches the grasp. SafeGrasp stalls
+at the same point, looks again with the side cameras and then completes the same grasp.
+
 ## Branches
 
 | branch | Isaac Sim / Isaac Lab | experiments |
 |---|---|---|
-| `main` (this one) | 5.1 / 2.3.2 | main benchmark (1,792 trials), controller ablation (918), deadlock recovery (153 + 448) |
+| `master` (this one) | 5.1 / 2.3.2 | main benchmark (1,792 trials), controller ablation (918), deadlock recovery (153 + 448) |
 | `isaacsim_6.1` | 6.1 / 3.0 | later experiments on the grasp close and on Segment Anything masks for pick-and-place |
 
 Rates cannot be compared across the two platforms, so each comparison is paired within one platform.
@@ -132,11 +144,11 @@ To film one scene and draw the qualitative figures (written to `results/film/` a
 
 | report item | branch | run | analyse | output |
 |---|---|---|---|---|
-| Table 1: SafeGrasp against baselines | `main` | `bench_main.sh 20`, `bench_dl_main.sh` | `analyze.py --exp main`, `analyze_dl_main.py` | `results/summary_main.md`, `results/summary_dl_main.md` |
-| Table 2 and the outcome figure: main benchmark | `main` | `bench_main.sh 20` | `analyze.py --exp main` | `results/summary_main.md`, `results/figures/main_outcomes.png` |
-| Table 3: controller ablation | `main` | `bench_ablation.sh` | `analyze.py --exp abl` | `results/summary_abl.md` |
-| Table 4: deadlock recovery | `main` | `bench_deadlock.sh` | `analyze_dl.py` | `results/summary_dl.md`, `results/figures/dl_outcomes.png` |
-| Perception and CBF trace plots of scene 407000 (PNG versions of the report figures) | `main` | `film_episodes.py` | `make_figures.py` | `results/figures/` |
+| Table 1: SafeGrasp against baselines | `master` | `bench_main.sh 20`, `bench_dl_main.sh` | `analyze.py --exp main`, `analyze_dl_main.py` | `results/summary_main.md`, `results/summary_dl_main.md` |
+| Table 2 and the outcome figure: main benchmark | `master` | `bench_main.sh 20` | `analyze.py --exp main` | `results/summary_main.md`, `results/figures/main_outcomes.png` |
+| Table 3: controller ablation | `master` | `bench_ablation.sh` | `analyze.py --exp abl` | `results/summary_abl.md` |
+| Table 4: deadlock recovery | `master` | `bench_deadlock.sh` | `analyze_dl.py` | `results/summary_dl.md`, `results/figures/dl_outcomes.png` |
+| Perception and CBF trace plots of scene 407000 (PNG versions of the report figures) | `master` | `film_episodes.py` | `make_figures.py` | `results/figures/` |
 | Table 5 (interventions on the close) and the SAM figure | `isaacsim_6.1` | see that branch's README | | |
 
 ## Method names
@@ -162,6 +174,7 @@ Each method is named `{proposer}_{executor}`, with optional settings after `@`.
 | `scripts/` | benchmark worker and launcher, analysis, figures, dataset conversion, kinematics checks against Isaac |
 | `tests/` | unit tests (no Isaac needed) |
 | `results/` | summaries, raw trial rows (`raw/*/w*.jsonl`), worker logs and figures |
+| `media/` | the two GIFs in this README |
 | `report.pdf` | the project report |
 
 The kinematics data in `safegrasp/kinematics/` came from `scripts/verify_fk_isaac.py`,
