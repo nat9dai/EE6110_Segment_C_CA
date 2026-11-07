@@ -1,6 +1,8 @@
 # SafeGrasp: Occlusion-Aware Safe Grasping in Clutter with Control Barrier Functions
 
-EE6110 Special Topics in Automation and Control (Advanced), Segment C continuous assessment.
+EE6110 Special Topics in Automation and Control (Advanced), Segment C CA.
+
+Group name in Canvas: `EE6110_1 Segment C CA Group`
 
 ## Team
 
