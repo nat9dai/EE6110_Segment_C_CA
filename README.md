@@ -2,6 +2,8 @@
 
 EE6110 Special Topics in Automation and Control (Advanced), Segment C continuous assessment.
 
+Group name in Canvas: `EE6110_1 Segment C CA Group`
+
 ## Team
 
 - Nuthasith Gerdpratoom (A0330412Y)
